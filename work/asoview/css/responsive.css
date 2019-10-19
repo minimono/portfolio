@@ -1,0 +1,142 @@
+@media screen and (min-width: 768px) {
+  .pc {
+    display: block !important;
+  }
+  .sp {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 24px;
+  }
+  h2, h3, h4, h5, h6 {
+    font-size: 20px;
+  }
+  .pc {
+    display: none !important;
+  }
+  .sp {
+    display: block !important;
+  }
+  .top {
+    height: 100vh;
+  }
+  .top .sns {
+    top: 10px;
+    left: 50%;
+    right: inherit;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .top .title .img1 {
+    width: 400px;
+  }
+  .top .title .img2 {
+    width: 400px;
+  }
+  .top .title .img3 {
+    width: 400px;
+  }
+  .top .title .img4 {
+    width: 400px;
+  }
+  .intro .text {
+    margin-bottom: 50px;
+  }
+  .intro .background-group .background1 {
+    background: url("../img/intro_bg01_sp.png") left top/cover;
+  }
+  .intro .background-group .background2 {
+    background: url("../img/intro_bg02_sp.png") left top/cover;
+  }
+  .plan {
+    font-size: 12px;
+  }
+  .plan .panel .cards .card {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .plan .panel .mini-cards .card {
+    width: 48%;
+    margin-bottom: 10px;
+  }
+  .athlete .content {
+    width: 90%;
+    margin: 200px auto 0;
+  }
+  .athlete .photo-group {
+    width: 90%;
+    margin: 15px auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .athlete .photo-group p {
+    width: 48%;
+  }
+  .athlete .background-group .background1 {
+    display: none;
+  }
+  .athlete .background-group .background2 {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    left: inherit;
+  }
+  .athlete .background-group .background2 img {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    background: none;
+  }
+  .athlete .background-group .background2 img .active {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .athlete .background-group .background2 .wrap {
+    display: none;
+  }
+  .athlete .background-group .background3 {
+    display: none;
+  }
+  .about .about-flex {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .about .about-flex .photo {
+    width: 100%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .about .about-flex .description {
+    width: 100%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-bottom: 20px;
+  }
+  .about .heading {
+    width: 80%;
+  }
+  .athlete .heading {
+    width: 50%;
+  }
+  .plan .heading {
+    width: 50%;
+  }
+  .intro .title .balloon {
+    width: 20%;
+  }
+  .athlete {
+    margin-top: 30px;
+  }
+  .intro {
+    margin-top: -70px;
+  }
+  .intro .sports-name {
+    right: 10%;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */

@@ -1,0 +1,512 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+/*ここまでhtml5doctor*/
+
+*{
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-size: 1.6rem;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  font-family: "Helvetica Neue", Helvetica, Arial, 游ゴシック, YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, sans-serif;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+img{
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+button{
+  color: inherit;
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+ul{
+  list-style: none;
+}
+
+h1{
+  font-size: calc(2.4rem + ((1vw - 0.64rem) * 2.1429))/*24px~36px*/;
+}
+
+h2, h3, h4, h5, h6{
+  font-size: calc(2rem + ((1vw - 0.64rem) * 0.7143));/*20px~24px*/
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1200px){
+  h1{
+    font-size: 3.6rem;
+  }
+  h2, h3, h4, h5, h6{
+    font-size: 2.4rem;
+  }
+}
+
+@media screen and (max-width: 640px){
+  h1{
+    font-size: 2.4rem;
+  }
+  h2, h3, h4, h5, h6{
+    font-size: 2rem;
+  }
+}
+/*ここまでテンプレート*/
+
+.container{
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 80px 0;
+}
+
+header h1{
+  width: 280px;
+  a{
+    display: block;
+  }
+}
+
+header nav{
+  color: white;
+  ul{
+    display: flex;
+    li{
+      margin-left: 25px;
+      a{
+        position: relative;
+        display: block;
+        padding-bottom: 5px;
+        transition: .2s;
+        border-bottom: 2px solid transparent;
+        &:hover{
+          border-bottom: 2px solid white;
+        }
+      }
+    }
+  }
+}
+
+header .header-menu{
+  display: none;
+}
+
+header .hamburger{
+  display: none;
+}
+
+.top{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.top .chevron{
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 25px;
+}
+
+.top .logo{
+  display: none;
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+}
+
+.top .top-overlay{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: url("../img/mainVisual-overlay@2x.png") center bottom / contain no-repeat;
+}
+
+@keyframes cross-fade{
+  5%{
+    opacity: 1;
+  }
+  20%{
+    opacity: 1;
+  }
+  25%{
+    z-index: 0;
+    opacity: 0;
+  }
+}
+
+.top .slide-group{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background-color: gray;
+  @for $i from 1 through 5{
+    .slide#{$i}{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("../img/main_visual_#{$i}.jpg") center center / cover;
+      animation: cross-fade 30s $i*6-6+0.2s linear infinite;
+      opacity: 0;
+      z-index: 1;
+    }
+  }
+}
+
+.concept{
+  padding: 120px 0;
+  background-color: #F6F6F6;
+  text-align: center;
+  .concept-wrapper{
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+.concept .concept-wrapper h2{
+  font-weight: normal;
+  margin-bottom: 60px;
+  font-size: 44px;
+}
+
+.concept .concept-wrapper .text{
+  text-align: left;
+  margin-top: 25px;
+  font-size: 20px;
+}
+
+.concept .concept-wrapper .pas-pol{
+  display: inline-block;
+  width: 200px;
+  margin-top: 25px;
+}
+
+.product{
+  padding: 100px 0;
+}
+
+.product .container .product-heading{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.title-wave{
+  padding-bottom: 15px;
+  background: url("../img/sectionTitle-underLine@2x.png") bottom left / 100px 15px no-repeat;
+}
+
+.btn{
+  position: relative;
+  display: block;
+  border: solid 2px black;
+  padding: 10px 50px;
+  transition: .5s;
+  color: black;
+  background: url("../img/button-arrow@2x.png") right 20px center / 10px 15px no-repeat;
+  &:hover{
+    color: white;
+    background: black url("../img/button-arrow-hover@2x.png") right 20px center / 10px 15px no-repeat;
+  }
+}
+
+.btn-sp{
+  display: none;
+}
+
+.product .container .product-group{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 70px;
+  .item{
+    width: 30%;
+    a{
+      display: block;
+      height: 100%;
+      transition: .2s;
+      &:hover{
+        opacity: 0.5;
+      }
+      h3{
+        margin: 0 15px;
+        line-height: 1.8;
+        color: #13191B;
+      }
+    }
+  }
+}
+
+.news{
+  padding: 100px 0;
+  background-color: #F6F6F6;
+}
+
+.news .container .news-heading{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.news .container .item{
+  margin-top: 50px;
+  a{
+    display: flex;
+    justify-content: space-between;
+    transition: .2s;
+    &:hover{
+      opacity: 0.5;
+    }
+    .img-wrap{
+      width: 40%;
+    }
+    .description{
+      width: 55%;
+      h3{
+        margin-bottom: 10px;
+      }
+      time{
+        color: #72787A;
+        font-size: 13px;
+      }
+      p{
+        margin-top: 30px;
+        color: #72787A;
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+.sns{
+  position: relative;
+}
+
+@mixin sns-btn($color){
+  display: block;
+  text-align: center;
+  border: solid 1px $color;
+  transition: all .5s;
+  color: $color;
+  &:hover{
+    color: white;
+    background-color: $color;
+  }
+}
+
+.sns .container .backtop{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  transform: translateX(-50%) translateY(-50%);
+  background: url("../img/backTop@2x.png") center center / contain;
+  cursor: pointer;
+  transition: .2s;
+  &:hover{
+    top: -5px;
+  }
+}
+
+.sns .container .btn-group{
+  display: flex;
+  justify-content: center;
+  padding: 35px 0;
+  *{
+    width: 170px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 8px;
+  }
+  .facebook{
+    @include sns-btn(#4871A9);
+  }
+  .twitter{
+    @include sns-btn(#86BDD3);
+  }
+  .hatena{
+    @include sns-btn(#2F9BD6);
+  }
+  .line{
+    @include sns-btn(#8EC09D);
+    display: none;
+  }
+}
+
+.footernav{
+  background-color: #939899;
+  padding: 40px 0;
+  color: white;
+  nav{
+    ul{
+      display: flex;
+      justify-content: center;
+      li{
+        margin: 0 15px;
+        a{
+          transition: .2s;
+          &:hover{
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer{
+  padding: 30px 0;
+  background-color: #656C6E;
+  .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo{
+      width: 100px;
+    }
+    .copy{
+      font-size: 10px;
+      color: white;
+    }
+  }
+}

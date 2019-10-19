@@ -1,0 +1,99 @@
+@media screen and (min-width:768px){
+  .pc{
+    display: block;
+  }
+  .sp{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 959px) and (min-width: 768px){
+  .main nav p{
+    width: 32%;
+    &:not(:first-child){
+      margin-left: 2%;
+    }
+  }
+}
+
+@media screen and (max-width: 767px){
+  h1{
+    font-size: 24px;
+  }
+
+  h2, h3, h4, h5, h6{
+    font-size: 20px;
+  }
+
+  .pc{
+    display: none;
+  }
+
+  .sp{
+    display: block;
+  }
+
+  .top{
+    height: 150vh;
+  }
+
+  header{
+    h1{
+      width: 120px;
+    }
+  }
+
+  .top .container .top-image1{
+    width: 80%;
+  }
+
+  .top .container .top-image2{
+    width: 50%;
+  }
+
+  .main .intro{
+    &::before{
+      background-image: url("../img/page-read_before_sp.png");
+      width: 21.33333vw;
+      height: 34.66667vw;
+    }
+    &::after{
+      background-image: url("../img/page-read_after_sp.png");
+      width: 21.33333vw;
+      height: 34.66667vw;
+    }
+  }
+  .main nav p{
+    width: 100%;
+  }
+  .main .contents .content{
+    width: 100%;
+    margin: 0 0 80px;
+    margin-left: 0 !important;
+  }
+  .main h3{
+    width: 80%;
+  }
+
+  footer p{
+    display: block !important;
+    margin: 0 !important;
+  }
+
+  footer{
+    a:hover > .nav-text::after{
+      width: 100% !important;
+      bottom: 10px !important;
+    }
+    a{
+      display: block !important;
+    }
+    a p:last-child{
+      display: inline-block !important;
+      margin: 0 auto !important;
+    }
+    p:last-child img{
+      height: 20px !important;
+    }
+  }
+}

@@ -1,0 +1,749 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  line-height: 1.5em;
+  letter-spacing: 0.05em;
+  font-size: 16px;
+  font-family: "Hiragino Sans", ヒラギノ角ゴシック, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Roboto, "Droid Sans", YuGothic, 游ゴシック, Meiryo, メイリオ, Verdana, "ＭＳ Ｐゴシック", sans-serif;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+img{
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+button{
+  color: inherit;
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+ul{
+  list-style: none;
+}
+
+h1{
+  font-size: 36px;
+}
+
+h2, h3, h4, h5, h6{
+  font-size: 24px;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: bold;
+}
+
+header{
+  height: 60px;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1{
+    width: 180px;
+    a{
+      display: block;
+    }
+  }
+}
+
+@keyframes slide-wrap{
+  100%{
+    transform: translateX(100%);
+  }
+}
+
+@keyframes cross-fade-zoom{
+  5%{
+    opacity: 1;
+  }
+  25%{
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  30%{
+    opacity: 0;
+    transform: scale(1.1);
+    z-index: 0;
+  }
+}
+
+@keyframes cross-fade{
+  5%{
+    opacity: 1;
+  }
+  25%{
+    opacity: 1;
+  }
+  30%{
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+.top{
+  overflow: hidden;
+  position: relative;
+  height: 140vh;
+}
+
+.top .sns{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  ul{
+    display: flex;
+    li{
+      width: 40px;
+      margin-left: 10px;
+    }
+  }
+}
+
+.top .title{
+  position: absolute;
+  z-index: 2;
+  top: 150px;
+  width: 100%;
+  @for $i from 1 through 4{
+    .img#{$i}{
+      position: relative;
+      width: 650px;
+      margin: 0 auto;
+      overflow: hidden;
+      &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 4;
+        background-color: white;
+        animation: slide-wrap 0.5s 0.2+$i*0.5s forwards;
+      }
+    }
+  }
+}
+
+.top .slide-group{
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  @for $i from 1 through 4{
+    .slide#{$i}{
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      background: url("../img/kv0#{$i}_pc.jpg") center center / cover;
+      animation: cross-fade-zoom 40s $i*10-10s infinite;
+    }
+  }
+  &::before{
+    content: "";
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    animation: slide-wrap 0.5s forwards;
+  }
+}
+
+.intro{
+  position: relative;
+  z-index: 4;
+  margin-top: -180px;
+}
+
+.intro .sports-name{
+  position: absolute;
+  top: 20px;
+  right: 100px;
+  width: 200px;
+  height: 53.22px;
+  overflow: hidden;
+  @for $i from 1 through 4{
+    .img#{$i}{
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      animation: cross-fade 40s $i*10-10s infinite;
+    }
+  }
+  &::before{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    animation: slide-wrap 0.5s 2.5s forwards;    
+  }
+}
+
+.intro .title{
+  position: relative;
+  text-align: center;
+  padding: 200px 0 50px;
+  .heading{
+    width: 70%;
+    transition: all 0.5s;
+    opacity: 0;
+    transform: translateY(100px);
+    &.active{
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .balloon{
+    position: absolute;
+    top: 75px;
+    left: 15%;
+    width: 12%;
+    transition: all 0.2s;
+    transform: scale(0);
+    &.active{
+      transform: scale(1);
+    }
+  }
+}
+
+.intro .text{
+  color: white;
+  margin: 0 auto 200px;
+  width: 80%;
+  transition: all 0.5s;
+  opacity: 0;
+  transform: translateY(100px);
+  &.active{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  p{
+    margin-bottom: 20px;
+  }
+}
+
+.intro .photo-group{
+  width: 95%;
+  margin: 0 auto 50px;
+  display: flex;
+  justify-content: space-between;
+  p{
+    width: 30%;
+  }
+}
+
+.intro .background-group{
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  .background1{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("../img/intro_bg01_pc.png") left top / cover;
+    transition: all 0.5s;
+    transform-origin: left top;
+    transform: translateX(-100%);
+    &.active{
+      transform: translateX(0);
+    }
+  }
+  .background2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("../img/intro_bg02_pc.png") right top / cover;
+    transition: all 0.5s 0.5s;
+    transform-origin: right top;
+    transform: translateX(100%);
+    &.active{
+      transform: translateX(0);
+    }
+  }
+}
+
+.about .heading{
+  width: 650px;
+  margin: 0 auto 40px;
+  transition: all 0.5s;
+  opacity: 0;
+  transform: translateY(100px);
+  &.active{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about .about-flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.about .about-flex .photo{
+  width: 48%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  transition: all 0.5s;
+  opacity: 0;
+  transform: translateY(100px);
+  &.active{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  p{
+    width: 45%;
+    margin: 0 10px 10px 0;
+  }
+}
+
+.about .about-flex .description{
+  width: 48%;
+  .text{
+    transition: all 0.5s 0.1s;
+    opacity: 0;
+    transform: translateY(100px);
+    &.active{
+      opacity: 1;
+      transform: translateY(0);
+    }
+    p{
+      margin-bottom: 15px;
+    }
+  }
+  .member{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;    
+    transition: all 0.5s 0.1s;
+    opacity: 0;
+    transform: translateY(100px);
+    &.active{
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .member-photo{
+      width: 30%;
+      margin-right: 30px;
+    }
+    .member-name{
+      width: 30%;
+      small{
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+.athlete{
+  margin-top: 200px;
+  position: relative;
+}
+
+.athlete .heading{
+  width: 350px;
+  margin: 0 auto 40px;
+  transition: all 0.5s;
+  opacity: 0;
+  transform: translateY(100px);
+  &.active{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.athlete .content{
+  margin-left: 5%;
+  background-color: white;
+  width: 45%;
+  text-align: center;
+  transition: all 0.5s;
+  transform: translateY(100px);
+  opacity: 0;
+  &.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  a{
+    display: block;
+    padding: 15px 40px 0;
+    &:hover{
+      opacity: 0.5;
+    }
+    .content-heading{
+      width: 80%;
+      margin: 0 auto 20px;
+    }
+    .content-text{
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    .content-button{
+      display: inline-block;
+      background: black;
+      color: white;
+      padding: 10px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.athlete .photo-group{
+  margin: 15px 0 0 10%;
+  padding-bottom: 20px;
+  display: flex;
+  width: 50%;
+  p{
+    width: 45%;
+    margin-right: 15px;
+  }
+  .photo1{
+    transition: all 0.5s 0.2s;
+    transform: translateY(100px);
+    opacity: 0;
+    &.active{
+    transform: translateY(0);
+    opacity: 1
+    }
+  }
+  .photo2{
+    transition: all 0.5s 0.4s;
+    transform: translateY(100px);
+    opacity: 0;
+    &.active{
+    transform: translateY(0);
+    opacity: 1;
+    }
+  }
+}
+
+.athlete .background-group{
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  .background1{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    width: 230px;
+    transition: all 0.5s 0.5s;
+    transform: translateX(100%);
+    &.active{
+      transform: translateX(0);
+    }
+  }
+  .background2{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 3500px;
+    height: 1000px;
+    margin: -130px 0 0 -1750px;
+    img{
+      width: 100%;
+      height: 100%;
+      background: url("../img/athlete_photo01_bg.jpg") center center / cover;
+      transition: all 1s;
+      transform: translateX(-200px);
+      &.active{
+      transform: translateX(0);
+      }
+    }
+    .wrap{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      transition: all 0.5s 0.5s;
+      &.active{
+        transform: translateX(100%);
+      }
+    }
+  }
+  .background3{
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    width: 230px;
+    transition: all 0.2s;
+    transform: translateX(-100%);
+    &.active{
+      transform: translateX(0);
+    }
+  }
+}
+
+.plan{
+  padding: 80px 0 0;
+}
+
+.plan .heading{
+  width: 400px;
+  margin: 0 auto 40px;
+}
+
+.plan .tab{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto -40px;
+  @for $i from 1 through 2{
+    .tab#{$i}{
+      width: 48%;
+      position: relative;
+      top: 0;
+      &.active{
+        transition: .5s;
+        top: -15px;
+      }
+      .off{
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.plan .panel{
+  .panel-child{
+    padding: 100px 0;
+    display: none;
+    &.active{
+      display: block;
+    }
+  }
+  .panel1{
+    background: url('../img/plan_bg_01_pc.gif') top center / contain;
+    .card .sports-name{
+      background-color: #5FC270;
+    }
+  }
+  .panel2{
+    background: url('../img/plan_bg_02_pc.gif') top center / contain;
+    .card .sports-name{
+      background-color: #0EA2E6;
+    }
+  }
+}
+
+.plan .panel .cards, .plan .panel .mini-cards{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto 40px;
+  .card{
+    width: 48%;
+    position: relative;
+    background-color: white;
+    a{
+      display: block;
+      padding-bottom: 20px;
+      &:hover{
+        opacity: 0.5;
+      }
+      .sports-name{
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+        font-style: italic;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .text{
+        font-weight: bold;
+        margin: 8px 8px 0;
+      }
+      .category{
+        display: inline-block;
+        margin-left: 8px;
+        padding: 2px 7px;
+        border: solid 1px gray;
+        border-radius: 5px;
+      }
+      .chevron{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        color: white;
+        background-color: black;
+      }
+    }
+  }
+}
+
+.plan .panel .mini-cards{
+  .card{
+    width: 24%;
+  }
+}
+
+.plan .attention{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.link{
+  p{
+    width: 90%;
+    margin: 35px auto 60px;
+    a{
+      display: block;
+      &:hover{
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+footer{
+  height: 32px;
+  background-color: #F7412D;
+  padding: 8px 0;
+  color: white;
+  text-align: center;
+}

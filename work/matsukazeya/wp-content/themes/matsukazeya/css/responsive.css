@@ -1,0 +1,65 @@
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+  h2 {
+    font-size: 30px;
+    font-weight: normal;
+  }
+  header nav {
+    display: none;
+  }
+  header .modal-open {
+    display: block;
+  }
+  .top {
+    background-image: url("../img/mob_main.jpg");
+  }
+  .donuts {
+    height: 300px;
+  }
+  .donuts .description {
+    position: static;
+    margin: 0 auto;
+    width: auto;
+  }
+  .donuts .description h2 {
+    margin: 0;
+  }
+  .donuts .description .text {
+    display: none;
+  }
+  .donuts .description .btn {
+    margin-top: 35px;
+  }
+  .products .product-group .product-item {
+    width: 30%;
+    margin: 0 10%;
+  }
+  .products .product-group .product-item:nth-child(4) {
+    display: none;
+  }
+  .info .flex .description {
+    width: 100%;
+    margin: 0 20px;
+  }
+  .info .flex .map-wrap {
+    width: 100%;
+    margin: 30px 20px 0;
+  }
+  footer .nav .flex .left {
+    width: 100%;
+    text-align: center;
+  }
+  footer .nav .flex .left .logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  footer .nav .flex .right {
+    width: 100%;
+  }
+  footer .nav .flex .right nav {
+    display: none;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */

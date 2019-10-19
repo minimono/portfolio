@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minimono Portfolio</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+  <link rel="stylesheet" href="slick/slick-theme.css">
+  <link rel="stylesheet" href="slick/slick.css">
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" href="img/favicon.ico">
+  <script src="js/jquery-3.4.1.min.js" defer></script>
+  <script src="slick/slick.min.js" defer></script>
+  <script src="js/index.js" defer></script>
+</head>
+<body>
+  <div class="loader">
+  </div>
+  <header>
+    <h1>Minimono</h1>
+    <nav>
+      <ul>
+        <li><a href="#service">Service</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skill">Skill</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <p class="hamburger sp">
+      <i class="fas fa-bars"></i>
+      <i class="fas fa-times"></i>
+    </p>
+  </header>
+  <div class="top">
+    <h2 id="title">WELCOME TO MY WEBSITE!</h2>
+    <p id="subtitle">I'm Minimono, a Web Engineer</p>
+  </div>
+  <div class="service" id="service">
+    <div class="container">
+      <h2 class="heading">SERVICE</h2>
+      <div class="service-group">
+        <div class="service-item coding effect-expansion">
+          <h3>コーディング</h3>
+          <div class="icon"><i class="fas fa-code"></i></div>
+          <p>デザインデータに忠実なコーディングをさせていただきます。表示速度が速く、保守性の高いサイト作りを心がけております。</p>
+        </div>
+        <div class="service-item responsive effect-expansion">
+          <h3>レスポンシブ化</h3>
+          <div class="icon"><i class="fas fa-mobile-alt"></i></div>
+          <p>PCでの表示にしか対応していないサイトを、タブレットやスマートフォンでの表示にも対応できるようにさせていただきます。WordPressで作られているサイトでも受け付けております。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="about" id="about">
+    <div class="container">
+      <div class="box">
+        <h2 class="heading">ABOUT</h2>
+        <div class="flex">
+          <p class="img-wrap"><img src="img/cat.png" alt="ミニモノの画像"></p>
+          <div class="text">
+            <p>1998年生まれの21歳です。</p>
+            <p>WebコーディングやWordPressを取り扱っており、１年半の経験があります。将来的には、Webデザインやフロントエンドのプログラミングも取り扱えるようにしていく予定です。</p>
+            <p>このサイトはデザインからコーディングまで0から制作しました。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="skill" id="skill">
+    <div class="container">
+      <h2 class="heading">SKILL</h2>
+      <div class="skill-group">
+        <div class="skill-item effect-expansion">
+          <h3>HTML5&CSS3</h3>
+          <div class="skill-icon"><i class="fas fa-code"></i></div>
+          <div class="skill-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        <div class="skill-item effect-expansion">
+          <h3>JavaScript</h3>
+          <div class="skill-icon"><i class="fab fa-js"></i></div>
+          <div class="skill-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+        <div class="skill-item effect-expansion">
+          <h3>PHP</h3>
+          <div class="skill-icon"><i class="fab fa-php"></i></div>
+          <div class="skill-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+        <div class="skill-item effect-expansion">
+          <h3>WordPress</h3>
+          <div class="skill-icon"><i class="fab fa-wordpress-simple"></i></div>
+          <div class="skill-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+        <div class="skill-item effect-expansion">
+          <h3>AdobeXD</h3>
+          <div class="skill-icon"><i class="fab fa-adobe"></i></div>
+          <div class="skill-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="work" id="work">
+    <div class="container">
+      <h2 class="heading">WORK</h2>
+      <p class="intro">以下の制作物は模写コーディングです。<br>画像をクリックすると模写したサイトが表示されます。</p>
+      <ul class="slider">
+        <li><a href="work/pas-pol/" target="_blank"><img src="img/portfolio_pas-pol.jpg" alt="pas-pol"></a></li>
+        <li><a href="work/matsukazeya/" target="_blank"><img src="img/portfolio_matsukazeya.jpg" alt="matsukazeya"></a></li>
+        <li><a href="work/asoview/" target="_blank"><img src="img/portfolio_asoview.jpg" alt="asoview"></a></li>
+        <li><a href="work/hoshino/" target="_blank"><img src="img/portfolio_hoshino.jpg" alt="hoshino"></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="contact" id="contact">
+    <div class="container">
+      <h2 class="heading">CONTACT</h2>
+      <p class="intro">お気軽に下記メールアドレスまでご連絡ください。</p>
+      <p class="arrow"><i class="fas fa-arrow-down"></i></p>
+      <p class="mail"><a href="mailto:minimono1001@yahoo.co.jp"><i class="far fa-envelope"></i>minimono1001@yahoo.co.jp</a></p>
+      <p class="note">3営業日以内に返信致します。<br>返信がない場合は迷惑メールフォルダをご確認ください。</p>
+    </div>
+  </div>
+  <footer>
+    <p>©︎2019 Minimono ALL rights reserved</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,96 @@
+@media screen and (min-width: 768px) {
+  .pc {
+    display: block !important;
+  }
+  .sp {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .skill .skill-group {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .skill .skill-group .skill-item {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .pc {
+    display: none !important;
+  }
+  .sp {
+    display: block !important;
+  }
+  header {
+    position: fixed;
+    background-color: #000000;
+    color: #ffffff;
+  }
+  header nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+  }
+  header nav ul {
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    color: #ffffff;
+  }
+  header nav ul li {
+    margin: 0;
+    background-color: rgba(240, 240, 240, 0.8);
+    color: #000000;
+  }
+  header nav ul li:not(:first-child) {
+    border-top: solid 2px #000000;
+  }
+  header nav ul li a {
+    display: block;
+  }
+  .top {
+    padding: 30vh 0;
+    background-attachment: scroll;
+  }
+  .top h2 {
+    font-size: 3.8rem;
+  }
+  .top p {
+    margin-top: 30px;
+  }
+  .service .service-group {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .service .service-group .service-item {
+    width: 100%;
+  }
+  .about .box {
+    margin: 0;
+  }
+  .about .box .flex {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .about .box .flex .img-wrap {
+    width: 50%;
+  }
+  .about .box .flex .text {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .skill .skill-group .skill-item {
+    width: 40%;
+  }
+  .skill .skill-group .skill-item h3 {
+    font-size: 1.5rem;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */

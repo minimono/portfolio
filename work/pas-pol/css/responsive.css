@@ -1,0 +1,198 @@
+@media screen and (max-width: 1000px) {
+  header {
+    padding: 15px 5%;
+    background-color: white;
+    -webkit-transition: 1s;
+    transition: 1s;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  header.open {
+    -webkit-transform: translateY(250px);
+            transform: translateY(250px);
+  }
+  header h1 {
+    display: none;
+  }
+  header nav {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+  }
+  header nav ul {
+    display: block;
+  }
+  header nav ul li {
+    margin: 0;
+    padding: 0 5%;
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  header nav ul li:not(:last-child) {
+    border-bottom: solid 2px white;
+  }
+  header nav ul li a {
+    padding: 0;
+    border: none;
+  }
+  header nav ul li a:hover {
+    border: none;
+  }
+  header .header-menu {
+    display: block;
+    color: black;
+  }
+  header .hamburger {
+    display: block;
+    width: 20px;
+  }
+  .top .logo {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .container {
+    max-width: 90%;
+  }
+  .product .container .product-group {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0;
+  }
+  .product .container .product-group .item {
+    width: 100%;
+  }
+  .product .container .product-group .item a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 50px;
+  }
+  .product .container .product-group .item a .img-wrap {
+    width: 30%;
+  }
+  .product .container .product-group .item a h3 {
+    width: 65%;
+    margin: 0;
+  }
+  footer .container {
+    display: block;
+  }
+  footer .container .logo {
+    margin: 0 auto;
+  }
+  footer .container .copy {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .concept {
+    text-align: left;
+  }
+  .concept .concept-wrapper {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .sns .container .btn-group {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .sns .container .btn-group * {
+    width: 48%;
+    margin: 10px 0 0;
+  }
+  .sns .container .btn-group .line {
+    display: block;
+  }
+  .footernav {
+    padding: 0;
+  }
+  .footernav nav ul {
+    display: block;
+  }
+  .footernav nav ul li {
+    margin: 0;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+  }
+  .footernav nav ul li:not(:last-child) {
+    border-bottom: solid 1px white;
+  }
+  .footernav nav ul li a {
+    display: block;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .title-wave {
+    background: url(../img/sectionTitle-underLine@2x.png) bottom center/100px 15px no-repeat;
+  }
+  .product .container .product-heading {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .product .container .product-heading .btn {
+    display: none;
+  }
+  .product .container .product-group .item a {
+    display: block;
+  }
+  .product .container .product-group .item a .img-wrap {
+    width: 100%;
+  }
+  .product .container .product-group .item a h3 {
+    width: auto;
+    margin: 0 40px;
+  }
+  .btn-sp {
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 70px;
+  }
+  .news .container .news-heading {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .news .container .news-heading .btn {
+    display: none;
+  }
+  .news .container .item a {
+    display: block;
+  }
+  .news .container .item a .img-wrap {
+    width: 100%;
+  }
+  .news .container .item a .description {
+    width: 100%;
+  }
+  .news .container .item a .description h3 {
+    margin-top: 20px;
+  }
+  .news .container .item a .description p {
+    display: none;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */

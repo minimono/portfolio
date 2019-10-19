@@ -1,0 +1,409 @@
+﻿/*ここからテンプレート*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+}
+
+input, select {
+  vertical-align:middle;
+}
+
+
+*{
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-size: 1.6rem;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+img{
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+button{
+  color: inherit;
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+ul, ol{
+  list-style: none;
+}
+/*ここまでテンプレート*/
+
+body{
+  font-size: 18px;
+}
+
+h2{
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.container{
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.btn{
+  display: inline-block;
+  padding: 10px 50px;
+  border: solid 2px #7D7D7D;
+  transition: .5s;
+  &:hover{
+    background-color: #000000;
+    color: #ffffff;
+  }
+}
+
+.loader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background-color: #ffffff;
+  p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  display: none;
+  padding: 60px 100px;
+  background-color: #000000;
+  color: #ffffff;
+  .modal-close{
+    display: table;
+    margin: 0 auto 60px;
+  }
+  nav{
+    ul{
+      li{
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3%;
+  background-color: rgba(#ffffff, 0.8);
+  .logo{
+    width: 150px;
+    margin: 10px 0;
+  }
+  nav{
+    ul{
+      display: flex;
+      li{
+        position: relative;
+        bottom: -6px;
+        &:not(:first-child){
+          margin-left: 20px;
+        }
+        a{
+          display: block;
+          font-size: 14px;
+          padding-bottom: 3px;
+          border-bottom: solid 3px transparent;
+          transition: .2s;
+          &:hover{
+            color: #C3B684;
+            border-bottom: solid 3px #C3B684;
+          }
+        }
+        &.nav-contact{
+          a{
+            border-bottom: solid 3px #C3B684;
+            &:hover{
+              border-bottom: solid 3px #000000;
+            }
+          }
+        }
+      }
+    }
+  }
+  .modal-open{
+    display: none;
+    width: 50px;
+  }
+}
+
+.top{
+  position: relative;
+  height: 100vh;
+  background: url("../img/main.jpg") center center / cover;
+  h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.about{
+  text-align: center;
+  padding: 120px 0;
+  h2{
+    margin-bottom: 60px;
+  }
+  .text{
+    margin-bottom: 35px;
+  }
+  .img-wrap{
+    width: 140px;
+    margin: 0 auto 25px;
+  }
+  .name{
+    margin-bottom: 50px;
+    font-size: 16px;
+  }
+}
+
+.donuts{
+  position: relative;
+  height: 500px;
+  padding: 30px 0;
+  text-align: center;
+  background: url("../img/bg_donuts.jpg") center center / cover;
+  .description{
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    width: 500px;
+    .subtitle{
+      font-size: 19px;
+      margin-bottom: 25px;
+    }
+    h2{
+      font-size: 21px;
+      margin-bottom: 65px;
+      .strong{
+        font-size: 30px;
+      }
+    }
+    .text{
+      text-align: left;
+    }
+    .btn{
+      margin-top: 20px;
+    }
+  }
+}
+
+.products{
+  padding: 100px 0;
+  background-image: url("../img/bg_beige.png");
+  text-align: center;
+  h2{
+    margin-bottom: 50px;
+  }
+  .intro{
+    font-size: 16px;
+  }
+  .product-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 60px;
+    .product-item{
+      width: 18%;
+    }
+  }
+  .btn{
+    margin-top: 60px;
+  }
+}
+
+.news{
+  padding: 100px 0;
+  text-align: center;
+  h2{
+    margin-bottom: 65px;
+  }
+  .fb{
+    padding-top: 30px;
+    border-top: solid 2px #EDE9DA;
+    .btn{
+      &:hover{
+        background-color: blue;
+      }
+    }
+  }
+}
+
+.contact{
+  padding: 100px 0;
+  text-align: center;
+  background-image: url("../img/bg_beige.png");
+  h2{
+    margin-bottom: 65px;
+  }
+  .intro{
+    margin-bottom: 45px;
+  }
+  .tel{
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+  .btn{
+    margin-top: 50px;
+  }
+}
+
+.info{
+  padding: 100px 0;
+  text-align: center;
+  h2{
+    margin-bottom: 60px;
+  }
+  .flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .description{
+      .name{
+        font-weight: bold;
+        text-align: left;
+        margin-bottom: 30px;
+      }
+      table{
+        tr{
+          padding: 10px 0;
+          th{
+            text-align: left;
+            font-weight: normal;
+            width: 130px;
+          }
+          td{
+            text-align: left;
+          }
+        }
+      }
+    }
+    .map-wrap{
+      width: 50%;
+      .map{
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%;
+        iframe{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100% !important;
+          height: 100% !important;
+        }
+      }
+    }
+  }
+  .btn{
+    margin-top: 35px;
+  }
+}
+
+footer{
+  .nav{
+    background-color: #000000;
+    .flex{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 40px 0;
+      color: #ffffff;
+      .left{
+        width: 40%;
+        font-size: 16px;
+        .logo{
+          width: 240px;
+          margin-bottom: 30px;
+        }
+        .name{
+          margin-bottom: 10px;
+          font-weight: bold;
+          font-size: 19px;
+        }
+      }
+      .right{
+        width: 60%;
+        nav{
+          display: flex;
+          justify-content: space-between;
+          ul{
+            width: 33%;
+            li{
+              margin-bottom: 10px;
+              font-size: 14px;
+              a:hover{
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+        .sns{
+          overflow: hidden;
+          .twitter{
+            float: right;
+            margin-left: 5px;
+            width: 100px;
+          }
+          .facebook{
+            float: right;
+            width: 100px;
+          }
+        }
+      }
+    }
+  }
+  .copy{
+    padding: 30px 0;
+    text-align: center;
+    font-size: 14px;
+  }
+}

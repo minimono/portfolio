@@ -1,0 +1,1081 @@
+@charset "UTF-8";
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5em;
+  letter-spacing: 0.05em;
+  font-size: 16px;
+  font-family: "Hiragino Sans", ヒラギノ角ゴシック, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Roboto, "Droid Sans", YuGothic, 游ゴシック, Meiryo, メイリオ, Verdana, "ＭＳ Ｐゴシック", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+button {
+  color: inherit;
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2, h3, h4, h5, h6 {
+  font-size: 24px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+header {
+  height: 60px;
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header h1 {
+  width: 180px;
+}
+
+header h1 a {
+  display: block;
+}
+
+@-webkit-keyframes slide-wrap {
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@keyframes slide-wrap {
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@-webkit-keyframes cross-fade-zoom {
+  5% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  30% {
+    opacity: 0;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    z-index: 0;
+  }
+}
+
+@keyframes cross-fade-zoom {
+  5% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  30% {
+    opacity: 0;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    z-index: 0;
+  }
+}
+
+@-webkit-keyframes cross-fade {
+  5% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+@keyframes cross-fade {
+  5% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+.top {
+  overflow: hidden;
+  position: relative;
+  height: 140vh;
+}
+
+.top .sns {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+}
+
+.top .sns ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.top .sns ul li {
+  width: 40px;
+  margin-left: 10px;
+}
+
+.top .title {
+  position: absolute;
+  z-index: 2;
+  top: 150px;
+  width: 100%;
+}
+
+.top .title .img1 {
+  position: relative;
+  width: 650px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.top .title .img1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+  background-color: white;
+  -webkit-animation: slide-wrap 0.5s 0.7s forwards;
+          animation: slide-wrap 0.5s 0.7s forwards;
+}
+
+.top .title .img2 {
+  position: relative;
+  width: 650px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.top .title .img2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+  background-color: white;
+  -webkit-animation: slide-wrap 0.5s 1.2s forwards;
+          animation: slide-wrap 0.5s 1.2s forwards;
+}
+
+.top .title .img3 {
+  position: relative;
+  width: 650px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.top .title .img3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+  background-color: white;
+  -webkit-animation: slide-wrap 0.5s 1.7s forwards;
+          animation: slide-wrap 0.5s 1.7s forwards;
+}
+
+.top .title .img4 {
+  position: relative;
+  width: 650px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.top .title .img4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+  background-color: white;
+  -webkit-animation: slide-wrap 0.5s 2.2s forwards;
+          animation: slide-wrap 0.5s 2.2s forwards;
+}
+
+.top .slide-group {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.top .slide-group .slide1 {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: url("../img/kv01_pc.jpg") center center/cover;
+  -webkit-animation: cross-fade-zoom 40s 0s infinite;
+          animation: cross-fade-zoom 40s 0s infinite;
+}
+
+.top .slide-group .slide2 {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: url("../img/kv02_pc.jpg") center center/cover;
+  -webkit-animation: cross-fade-zoom 40s 10s infinite;
+          animation: cross-fade-zoom 40s 10s infinite;
+}
+
+.top .slide-group .slide3 {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: url("../img/kv03_pc.jpg") center center/cover;
+  -webkit-animation: cross-fade-zoom 40s 20s infinite;
+          animation: cross-fade-zoom 40s 20s infinite;
+}
+
+.top .slide-group .slide4 {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: url("../img/kv04_pc.jpg") center center/cover;
+  -webkit-animation: cross-fade-zoom 40s 30s infinite;
+          animation: cross-fade-zoom 40s 30s infinite;
+}
+
+.top .slide-group::before {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  -webkit-animation: slide-wrap 0.5s forwards;
+          animation: slide-wrap 0.5s forwards;
+}
+
+.intro {
+  position: relative;
+  z-index: 4;
+  margin-top: -180px;
+}
+
+.intro .sports-name {
+  position: absolute;
+  top: 20px;
+  right: 100px;
+  width: 200px;
+  height: 53.22px;
+  overflow: hidden;
+}
+
+.intro .sports-name .img1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-animation: cross-fade 40s 0s infinite;
+          animation: cross-fade 40s 0s infinite;
+}
+
+.intro .sports-name .img2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-animation: cross-fade 40s 10s infinite;
+          animation: cross-fade 40s 10s infinite;
+}
+
+.intro .sports-name .img3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-animation: cross-fade 40s 20s infinite;
+          animation: cross-fade 40s 20s infinite;
+}
+
+.intro .sports-name .img4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-animation: cross-fade 40s 30s infinite;
+          animation: cross-fade 40s 30s infinite;
+}
+
+.intro .sports-name::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  -webkit-animation: slide-wrap 0.5s 2.5s forwards;
+          animation: slide-wrap 0.5s 2.5s forwards;
+}
+
+.intro .title {
+  position: relative;
+  text-align: center;
+  padding: 200px 0 50px;
+}
+
+.intro .title .heading {
+  width: 70%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+
+.intro .title .heading.active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.intro .title .balloon {
+  position: absolute;
+  top: 75px;
+  left: 15%;
+  width: 12%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.intro .title .balloon.active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.intro .text {
+  color: white;
+  margin: 0 auto 200px;
+  width: 80%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+
+.intro .text.active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.intro .text p {
+  margin-bottom: 20px;
+}
+
+.intro .photo-group {
+  width: 95%;
+  margin: 0 auto 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.intro .photo-group p {
+  width: 30%;
+}
+
+.intro .background-group {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.intro .background-group .background1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../img/intro_bg01_pc.png") left top/cover;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.intro .background-group .background1.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.intro .background-group .background2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../img/intro_bg02_pc.png") right top/cover;
+  -webkit-transition: all 0.5s 0.5s;
+  transition: all 0.5s 0.5s;
+  -webkit-transform-origin: right top;
+          transform-origin: right top;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.intro .background-group .background2.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.about .heading {
+  width: 650px;
+  margin: 0 auto 40px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+
+.about .heading.active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.about .about-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.about .about-flex .photo {
+  width: 48%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+
+.about .about-flex .photo.active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.about .about-flex .photo p {
+  width: 45%;
+  margin: 0 10px 10px 0;
+}
+
+.about .about-flex .description {
+  width: 48%;
+}
+
+.about .about-flex .description .text {
+  -webkit-transition: all 0.5s 0.1s;
+  transition: all 0.5s 0.1s;
+  opacity: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+
+.about .about-flex .description .text.active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.about .about-flex .description .text p {
+  margin-bottom: 15px;
+}
+
+.about .about-flex .description .member {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  -webkit-transition: all 0.5s 0.1s;
+  transition: all 0.5s 0.1s;
+  opacity: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+
+.about .about-flex .description .member.active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.about .about-flex .description .member .member-photo {
+  width: 30%;
+  margin-right: 30px;
+}
+
+.about .about-flex .description .member .member-name {
+  width: 30%;
+}
+
+.about .about-flex .description .member .member-name small {
+  font-size: 10px;
+}
+
+.athlete {
+  margin-top: 200px;
+  position: relative;
+}
+
+.athlete .heading {
+  width: 350px;
+  margin: 0 auto 40px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+
+.athlete .heading.active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.athlete .content {
+  margin-left: 5%;
+  background-color: white;
+  width: 45%;
+  text-align: center;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  opacity: 0;
+}
+
+.athlete .content.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+.athlete .content a {
+  display: block;
+  padding: 15px 40px 0;
+}
+
+.athlete .content a:hover {
+  opacity: 0.5;
+}
+
+.athlete .content a .content-heading {
+  width: 80%;
+  margin: 0 auto 20px;
+}
+
+.athlete .content a .content-text {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.athlete .content a .content-button {
+  display: inline-block;
+  background: black;
+  color: white;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.athlete .photo-group {
+  margin: 15px 0 0 10%;
+  padding-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+}
+
+.athlete .photo-group p {
+  width: 45%;
+  margin-right: 15px;
+}
+
+.athlete .photo-group .photo1 {
+  -webkit-transition: all 0.5s 0.2s;
+  transition: all 0.5s 0.2s;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  opacity: 0;
+}
+
+.athlete .photo-group .photo1.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+.athlete .photo-group .photo2 {
+  -webkit-transition: all 0.5s 0.4s;
+  transition: all 0.5s 0.4s;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  opacity: 0;
+}
+
+.athlete .photo-group .photo2.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+.athlete .background-group {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.athlete .background-group .background1 {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  width: 230px;
+  -webkit-transition: all 0.5s 0.5s;
+  transition: all 0.5s 0.5s;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.athlete .background-group .background1.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.athlete .background-group .background2 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 3500px;
+  height: 1000px;
+  margin: -130px 0 0 -1750px;
+}
+
+.athlete .background-group .background2 img {
+  width: 100%;
+  height: 100%;
+  background: url("../img/athlete_photo01_bg.jpg") center center/cover;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: translateX(-200px);
+          transform: translateX(-200px);
+}
+
+.athlete .background-group .background2 img.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.athlete .background-group .background2 .wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  -webkit-transition: all 0.5s 0.5s;
+  transition: all 0.5s 0.5s;
+}
+
+.athlete .background-group .background2 .wrap.active {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.athlete .background-group .background3 {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+  width: 230px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.athlete .background-group .background3.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.plan {
+  padding: 80px 0 0;
+}
+
+.plan .heading {
+  width: 400px;
+  margin: 0 auto 40px;
+}
+
+.plan .tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+  margin: 0 auto -40px;
+}
+
+.plan .tab .tab1 {
+  width: 48%;
+  position: relative;
+  top: 0;
+}
+
+.plan .tab .tab1.active {
+  -webkit-transition: .5s;
+  transition: .5s;
+  top: -15px;
+}
+
+.plan .tab .tab1 .off {
+  cursor: pointer;
+}
+
+.plan .tab .tab2 {
+  width: 48%;
+  position: relative;
+  top: 0;
+}
+
+.plan .tab .tab2.active {
+  -webkit-transition: .5s;
+  transition: .5s;
+  top: -15px;
+}
+
+.plan .tab .tab2 .off {
+  cursor: pointer;
+}
+
+.plan .panel .panel-child {
+  padding: 100px 0;
+  display: none;
+}
+
+.plan .panel .panel-child.active {
+  display: block;
+}
+
+.plan .panel .panel1 {
+  background: url("../img/plan_bg_01_pc.gif") top center/contain;
+}
+
+.plan .panel .panel1 .card .sports-name {
+  background-color: #5FC270;
+}
+
+.plan .panel .panel2 {
+  background: url("../img/plan_bg_02_pc.gif") top center/contain;
+}
+
+.plan .panel .panel2 .card .sports-name {
+  background-color: #0EA2E6;
+}
+
+.plan .panel .cards, .plan .panel .mini-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto 40px;
+}
+
+.plan .panel .cards .card, .plan .panel .mini-cards .card {
+  width: 48%;
+  position: relative;
+  background-color: white;
+}
+
+.plan .panel .cards .card a, .plan .panel .mini-cards .card a {
+  display: block;
+  padding-bottom: 20px;
+}
+
+.plan .panel .cards .card a:hover, .plan .panel .mini-cards .card a:hover {
+  opacity: 0.5;
+}
+
+.plan .panel .cards .card a .sports-name, .plan .panel .mini-cards .card a .sports-name {
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  font-style: italic;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.plan .panel .cards .card a .text, .plan .panel .mini-cards .card a .text {
+  font-weight: bold;
+  margin: 8px 8px 0;
+}
+
+.plan .panel .cards .card a .category, .plan .panel .mini-cards .card a .category {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 7px;
+  border: solid 1px gray;
+  border-radius: 5px;
+}
+
+.plan .panel .cards .card a .chevron, .plan .panel .mini-cards .card a .chevron {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+
+.plan .panel .mini-cards .card {
+  width: 24%;
+}
+
+.plan .attention {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.link p {
+  width: 90%;
+  margin: 35px auto 60px;
+}
+
+.link p a {
+  display: block;
+}
+
+.link p a:hover {
+  opacity: 0.5;
+}
+
+footer {
+  height: 32px;
+  background-color: #F7412D;
+  padding: 8px 0;
+  color: white;
+  text-align: center;
+}
+/*# sourceMappingURL=stylesheet.css.map */

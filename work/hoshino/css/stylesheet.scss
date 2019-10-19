@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/earlyaccess/notosansjapanese.css");
+
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  line-height: 1.5em;
+  letter-spacing: 0.05em;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+img{
+  width: 100%;
+}
+
+button{
+  color: inherit;
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+ul{
+  list-style: none;
+}
+
+h1{
+  font-size: 36px;
+}
+
+h2, h3, h4, h5, h6{
+  font-size: 24px;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: bold;
+}
+
+p{
+  margin-bottom: 15px;
+}
+
+body{
+  font-family: "Noto Sans Japanese", sans-serif;
+}
+
+.container{
+  width: 95%;
+  margin: 0 auto;
+}
+
+header{
+  background: #99cad2;
+  height: 50px;
+  .container{
+    display: flex;
+    align-items: center;
+  }
+  h1{
+    width: 100px;
+    a{
+      height: 50px;
+      line-height: 1;
+    }
+  }
+}
+
+.top{
+  position: relative;
+  height: 90vh;
+  .container{
+    position: relative;
+    height: 100%;
+    .top-image1{
+      margin: 0;
+      width: 25%;
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      top: 0;
+    }
+    .top-image2{
+      margin: 0;
+      width: 25%;
+      position: absolute;
+      z-index: 2;
+      right: 0;
+      bottom: 0;
+      img{
+        vertical-align: bottom;
+      }
+    }
+  }
+  @for $i from 1 through 4{
+    .slide#{$i}{
+      @if($i != 1){
+        display: none;
+      }
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+    }
+  }
+  .slide1{
+    background-image: url("../img/kv_anjin.jpg");
+  }
+  .slide2{
+    background-image: url("../img/kv_bari.jpg");
+  }
+  .slide3{
+    background-image: url("../img/kv_oirase.jpg");
+  }
+  .slide4{
+    background-image: url("../img/kv_taketomijima.jpg");
+  }
+}
+
+.main{
+  text-align: center;
+  padding: 60px 0 100px;
+  .intro{
+    display: inline-block;
+    margin-bottom: 100px;
+    position: relative;
+    z-index: 3;
+    &::before{
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: -10vw;
+      left: -2vw;
+      width: 20vw;
+      height: 20vw;
+      background-image: url("../img/page-read_before.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: -10vw;
+      right: -2vw;
+      width: 20vw;
+      height: 20vw;
+      background-image: url("../img/page-read_after.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+  nav{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    p{
+      width: 19%;
+      &:not(:first-child){
+        margin-left: 1.25%;
+      }
+      &:hover{
+        opacity: 0.5;
+      }
+    }
+  }
+  h2{
+    margin: 60px auto;
+    width: 90%;
+  }
+  .contents{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .content{
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      width: 32%;
+      position: relative;
+      &:not(:first-child){
+        margin-left: 2%;
+      }
+      .content-img{
+        margin: 0;
+      }
+      .content-text{
+        h3{
+          font-weight: normal;
+          margin: 25px 0 45px;
+        }
+        p{
+          margin-bottom: 30px;
+        }
+      }
+      .content-detail{
+        margin-top: auto;
+        a{
+          display: inline-block;
+          width: 100px;
+          height: 30px;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          background-image: url("../img/card-link_official.png");
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: right bottom;
+          transition: background-image .2s;
+          &:hover{
+            background-image: url("../img/card-link_official_hover.png");
+          }
+        }
+      }
+    }
+  }
+}
+
+footer{
+  background-color: #292928;
+  padding: 50px 0 20px;
+  h2{
+    width: 180px;
+    margin: 0 auto 70px;
+  }
+  nav{
+    margin-bottom: 55px;
+    display: flex;
+    .item{
+      width: 25%;
+      text-align: center;
+      height: 40px;
+      line-height: 40px;
+      &:not(:first-child){
+        border-left: 1px solid #383838;
+      }
+      a{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        &:hover > .nav-text::after{
+          content: "";
+          position: absolute;
+          left: 2px;
+          bottom: 10px;
+          width: 100%;
+          height: 1px;
+          background-color: white;
+        }
+      }
+      p{
+        position: relative;
+        margin: 0;
+      }
+      img{
+        vertical-align: middle;
+      }
+      .nav-icon img{
+        height: 40px;
+        width: auto;
+      }
+      .nav-text img{
+        height: 24px;
+        width: auto;
+      }
+    }
+  }
+  .copyright{
+  font-size: 13px;
+  text-align: center;
+  color: gray;
+  }
+}

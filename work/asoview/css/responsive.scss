@@ -1,0 +1,158 @@
+@media screen and (min-width: 768px){
+  .pc{
+    display: block !important;
+  }
+
+  .sp{
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 767px){
+  h1{
+    font-size: 24px;
+  }
+
+  h2, h3, h4, h5, h6{
+    font-size: 20px;
+  }
+
+  .pc{
+    display: none !important;
+  }
+
+  .sp{
+    display: block !important;
+  }
+
+  .top{
+    height: 100vh;
+  }
+
+  .top .sns{
+    top: 10px;
+    left: 50%;
+    right: inherit;
+    transform: translateX(-50%);
+  }
+
+  .top .title{
+    @for $i from 1 through 4{
+      .img#{$i}{
+        width: 400px;
+      }
+    }
+  }
+
+  .intro .text{
+    margin-bottom: 50px;
+  }
+
+  .intro .background-group{
+    .background1{
+      background: url("../img/intro_bg01_sp.png") left top / cover;
+    }
+    .background2{
+      background: url("../img/intro_bg02_sp.png") left top / cover;
+    }
+  }
+
+  .plan{
+    font-size: 12px;
+  }
+
+  .plan .panel .cards{
+    .card{
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  .plan .panel .mini-cards{
+    .card{
+      width: 48%;
+      margin-bottom: 10px;
+    }
+  }
+
+  .athlete .content{
+    width: 90%;
+    margin: 200px auto 0;
+  }
+
+  .athlete .photo-group{
+    width: 90%;
+    margin: 15px auto;
+    justify-content: space-between;
+    p{
+      width: 48%;
+    }
+  }
+
+  .athlete .background-group{
+    .background1{
+      display: none;
+    }
+    .background2{
+      width: 100%;
+      height: auto;
+      margin: 0;
+      left: inherit;
+      img{
+        transform: translateX(-100%);
+        background: none;
+        
+        .active{
+          transform: translateX(0);
+        }
+      }
+      .wrap{
+        display: none;
+      }
+    }
+    .background3{
+      display: none;
+    }
+  }
+
+  .about .about-flex{
+    flex-wrap: wrap;
+    .photo{
+      width: 100%;
+      order: 2;
+    }
+    .description{
+      width: 100%;
+      order: 1;
+      margin-bottom: 20px;
+    }
+  }
+
+  .about .heading{
+    width: 80%;
+  }
+
+  .athlete .heading{
+    width: 50%;
+  }
+
+  .plan .heading{
+    width: 50%;
+  }
+
+  .intro .title .balloon{
+    width: 20%;
+  }
+
+  .athlete{
+    margin-top: 30px;
+  }
+
+  .intro{
+    margin-top: -70px;
+  }
+
+  .intro .sports-name{
+    right: 10%;
+  }
+}
